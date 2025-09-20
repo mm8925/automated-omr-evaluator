@@ -14,7 +14,9 @@ with open(answer_key_path, "r") as f:
 # --- Streamlit UI ---
 st.title("Automated OMR Evaluation System")
 
-uploaded_file = st.file_uploader("Upload OMR sheet image", type=["png", "jpg", "jpeg"])
+uploaded_file = st.file_uploader(
+    "Upload OMR sheet image", type=["png", "jpg", "jpeg"]
+)
 
 if uploaded_file:
     image = Image.open(uploaded_file)
